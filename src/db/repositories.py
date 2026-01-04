@@ -62,3 +62,14 @@ class TurnRepo:
     def list_recent_turns(self, session_id: str, limit: int = 20) -> List[Dict[str, Any]]:
         cur = self.turns.find({"session_id": session_id}).sort("turn_index", -1).limit(limit)
         return list(cur)[::-1]  # oldest→newest
+
+    def get_turn(self, turn_id: str) -> Optional[Dict[str, Any]]:
+        """Get a single turn by turn_id"""
+        return self.turns.find_one({"_id": turn_id})
+
+    def get_turns_by_session(self, session_id: str, limit: int = 50, skip: int = 0) -> List[Dict[str, Any]]:
+        """Get all turns for a session"""
+        cur = self.turns.find(
+            {"session_id": session_id}
+        ).sort("created_at", -1).skip(skip).limit(limit)
+        return list(cur)

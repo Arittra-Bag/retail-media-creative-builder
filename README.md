@@ -113,3 +113,8 @@ Generate multiple platform variants in one execution with platform-specific meta
 ### Testing
 
 Each component is independently testable. Run tests with: python scratch_test.py
+
+OR, if production apis are live, then test with (at root):
+```
+uvicorn run_api:app
+```
