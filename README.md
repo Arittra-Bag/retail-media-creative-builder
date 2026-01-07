@@ -1,5 +1,10 @@
 # Retail Media Creative Builder
 
+<img width="1919" height="863" alt="image" src="https://github.com/user-attachments/assets/3af4c8cd-c05f-432c-b738-3191cacb3d0b" />
+
+Client Side (Frontend) Repo Link : https://github.com/ConnectMayukh12/Team-VC
+
+
 A production-grade AI system for generating compliant retail media creatives at scale. Built with LangGraph for orchestration, this system combines deterministic rule engines with LLM-powered agents to produce platform-ready creative assets that meet strict retailer compliance requirements.
 
 ## Overview
